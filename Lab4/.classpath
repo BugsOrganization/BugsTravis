@@ -9,5 +9,6 @@
 	<classpathentry kind="lib" path="G:/itextpdf-5.5.13.jar"/>
 	<classpathentry kind="lib" path="G:/mysql-connector.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="lib" path="G:/junit-4.12.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
