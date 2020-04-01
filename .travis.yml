@@ -1,0 +1,14 @@
+dist: xenial
+language: java
+jdk:
+  - openjdk8
+  - openjdk11
+script:
+  - ./mvnw clean install
+
+notifications:
+  email: cristian.nitu85@gmail.com
+services:
+  - mysql
+before_install:
+  - mysql -e 'CREATE DATABASE IF NOT EXISTS bug;'
