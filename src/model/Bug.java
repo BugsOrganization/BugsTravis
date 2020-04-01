@@ -1,5 +1,6 @@
 package model;
 
+
 public class Bug {
 	private int Id;
 	private int ProductId;
@@ -69,6 +70,26 @@ public class Bug {
 		return AssignedTo;
 	}
 	
+	 @Override
+	    public boolean equals(Object o) { 
+	  
+	        // If the object is compared with itself then return true   
+	        if (o == this) { 
+	            return true; 
+	        } 
+	  
+	        
+	        if (!(o instanceof Bug)) { 
+	            return false; 
+	        } 
+	          
+	        Bug c = (Bug) o; 
+	          
+	        return c.getId() == Id && c.getProductId() == ProductId
+					&& c.getStatus().equals(Status) && c.getPriority() == Priority
+					&& c.getRegisteredBy() == RegisteredBy 
+					&& c.getAssignedTo() == AssignedTo;
+	    } 
 	
 	
 }
