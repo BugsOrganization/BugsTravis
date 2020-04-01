@@ -4,9 +4,6 @@ jdk:
   - openjdk8
   - openjdk11
 
-before_script: 
-    -   cd L4B
-    -   cd Lab4
 script: ant build
 
 notifications:
