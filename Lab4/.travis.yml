@@ -4,6 +4,7 @@ jdk:
   - openjdk8
   - openjdk11
 
+before_script: cd Lab4
 script: ant build
 
 notifications:
@@ -11,4 +12,4 @@ notifications:
 services:
   - mysql
 before_install:
-  - mysql -e 'CREATE DATABASE IF NOT EXISTS lab4;'
+  - mysql -e 'CREATE DATABASE IF NOT EXISTS bug;'
