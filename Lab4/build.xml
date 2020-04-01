@@ -45,7 +45,7 @@
         <pathelement location="Lab4/lib/itextpdf-5.5.13.jar"/>
         <pathelement location="Lab4/lib/junit-4.12.jar"/>
         <pathelement location="Lab4/lib/mysql-connector.jar"/>
-    </path>y
+    </path>
     <target name="init">
         <mkdir dir="Lab4/bin"/>
         <copy includeemptydirs="false" todir="/Lab4/bin">
