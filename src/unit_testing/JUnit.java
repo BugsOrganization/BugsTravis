@@ -1,8 +1,9 @@
 package unit_testing;
 
 import static org.junit.Assert.assertNull;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.Assert.assertTrue;
+//import static org.junit.jupiter.api.Assertions.assertEquals;
+//import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -19,20 +20,6 @@ import model.Bug;
 
 public class JUnit {
 	
-	boolean checkEqualProducts(Products a, Products b)
-	{
-		return a.getId() == b.getId() && a.getDate().equals(b.getDate())
-				&& a.getDescription().equals(b.getDescription())
-				&& a.getName().equals(b.getName());
-	}
-	
-	boolean checkEqualBugs(Bug a, Bug b)
-	{
-		return a.getId() == b.getId() && a.getProductId() == b.getProductId()
-				&& a.getStatus().equals(b.getStatus()) && a.getPriority() == b.getPriority()
-				&& a.getRegisteredBy() == b.getRegisteredBy() 
-				&& a.getAssignedTo() == b.getAssignedTo();
-	}
 	
 	@Test
 	public void testProduct() throws Exception {
@@ -50,7 +37,7 @@ public class JUnit {
 			
 		Products dbProduct = Products.selectById(6);
 			
-		assertTrue(checkEqualProducts(b, dbProduct));
+		assertTrue(b.equals(dbProduct));
 		
 		
 		b.setName("Updated name");
@@ -58,7 +45,7 @@ public class JUnit {
 		b.updateTableById();
 		
 		dbProduct = Products.selectById(6);
-		assertTrue(checkEqualProducts(b, dbProduct));
+		assertTrue(b.equals(dbProduct));
 	
 		b.deleteFromTableById();
 		dbProduct = Products.selectById(6);
@@ -73,11 +60,11 @@ public class JUnit {
 		Bug bug = new Bug(2, 1, "Assigned", 3, 2, 1);
 		Bug dbBug = BugGateway.selectById(2);
 		
-		assertTrue(checkEqualBugs(bug, dbBug));
+		assertTrue(bug.equals(dbBug));
 		
-		bug = BugGateway.insertIntoTableById(17, 2, "New", 2, 2, 2);
-		dbBug = BugGateway.selectById(17);
+		bug = BugGateway.insertIntoTableById(20, 2, "New", 2, 2, 2);
+		dbBug = BugGateway.selectById(20);
 		
-		assertTrue(checkEqualBugs(bug, dbBug));
+		assertTrue(bug.equals(dbBug));
 	}
 }
