@@ -29,48 +29,56 @@
         <pathelement location="bin"/>
         <pathelement location="../../../../../itextpdf-5.5.13.jar"/>
         <pathelement location="../../../../../mysql-connector.jar"/>
+        <pathelement location="../../../../../junit-4.12.jar"/>
         <path refid="JUnit 5.libraryclasspath"/>
     </path>
     <path id="run.ApplicationStart.classpath">
         <path refid="Lab4Bugs.classpath"/>
         <pathelement location="../../../../../itextpdf-5.5.13.jar"/>
         <pathelement location="../../../../../mysql-connector.jar"/>
+        <pathelement location="../../../../../junit-4.12.jar"/>
         <path refid="JUnit 5.libraryclasspath"/>
     </path>
     <path id="run.BugGateway.classpath">
         <path refid="Lab4Bugs.classpath"/>
         <pathelement location="../../../../../itextpdf-5.5.13.jar"/>
         <pathelement location="../../../../../mysql-connector.jar"/>
+        <pathelement location="../../../../../junit-4.12.jar"/>
         <path refid="JUnit 5.libraryclasspath"/>
     </path>
     <path id="run.BugLogic.classpath">
         <path refid="Lab4Bugs.classpath"/>
         <pathelement location="../../../../../itextpdf-5.5.13.jar"/>
         <pathelement location="../../../../../mysql-connector.jar"/>
+        <pathelement location="../../../../../junit-4.12.jar"/>
         <path refid="JUnit 5.libraryclasspath"/>
     </path>
     <path id="run.BugThreadGateway.classpath">
         <path refid="Lab4Bugs.classpath"/>
         <pathelement location="../../../../../itextpdf-5.5.13.jar"/>
         <pathelement location="../../../../../mysql-connector.jar"/>
+        <pathelement location="../../../../../junit-4.12.jar"/>
         <path refid="JUnit 5.libraryclasspath"/>
     </path>
     <path id="run.EmployeeGateway.classpath">
         <path refid="Lab4Bugs.classpath"/>
         <pathelement location="../../../../../itextpdf-5.5.13.jar"/>
         <pathelement location="../../../../../mysql-connector.jar"/>
+        <pathelement location="../../../../../junit-4.12.jar"/>
         <path refid="JUnit 5.libraryclasspath"/>
     </path>
     <path id="run.Products.classpath">
         <path refid="Lab4Bugs.classpath"/>
         <pathelement location="../../../../../itextpdf-5.5.13.jar"/>
         <pathelement location="../../../../../mysql-connector.jar"/>
+        <pathelement location="../../../../../junit-4.12.jar"/>
         <path refid="JUnit 5.libraryclasspath"/>
     </path>
     <path id="run.JUnit (3).classpath">
         <path refid="Lab4Bugs.classpath"/>
         <pathelement location="../../../../../itextpdf-5.5.13.jar"/>
         <pathelement location="../../../../../mysql-connector.jar"/>
+        <pathelement location="../../../../../junit-4.12.jar"/>
         <path refid="JUnit 5.libraryclasspath"/>
     </path>
     <target name="init">
