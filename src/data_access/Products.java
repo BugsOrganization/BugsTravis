@@ -49,6 +49,25 @@ public class Products {
 		this.ReleaseDate = date;
 	}
 	
+	 @Override
+	    public boolean equals(Object o) { 
+	  
+	        // If the object is compared with itself then return true   
+	        if (o == this) { 
+	            return true; 
+	        } 
+	  
+	        if (!(o instanceof Products)) { 
+	            return false; 
+	        } 
+	          
+	        Products c = (Products) o; 
+	          
+	        return c.getId() == Id && c.getDate().equals(ReleaseDate)
+					&& c.getDescription().equals(Description)
+					&& c.getName().equals(Name);
+	    } 
+	
 	private final static String selectByIdStatement = "SELECT * FROM Products WHERE Id "+ " =? ";
 	private final static String selectStatement = "SELECT * FROM Products";
 	
